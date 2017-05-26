@@ -1,0 +1,26 @@
+/*
+calculate more evenly spaced boards and lines
+*/
+
+.space {
+    width: 70px;
+    height: 65px;
+}
+
+.vertline {
+    width: 5px;
+    height: 75px;
+}
+
+.horzline {
+    width: 75px;
+    height: 5px;
+}
+
+#textArea {
+    text-align: left;
+}
+
+#messageBox {
+    padding-left: 5.0em
+}

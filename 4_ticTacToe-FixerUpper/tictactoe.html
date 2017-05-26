@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+
+<html>
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+    <script src="tictactoe.js"></script>
+    <link rel="stylesheet" href="tictactoe.css">
+    <head>
+        <title> Tictactoe</title>
+    </head>
+    <body onload='connect()'> <!-- Calls this JS function on webpage load -->
+        <script>
+            //REPLACE WITH YOUR FIREBASE INFORMATION
+            //------------------------------------------------------------------
+            var config = { //Chris' firebase
+            apiKey: "AIzaSyBkny_zSEzllYyPfdykzMDIefij_y4dpcs",
+            authDomain: "multiplayer-tictactoe.firebaseapp.com",
+            databaseURL: "https://multiplayer-tictactoe.firebaseio.com",
+            storageBucket: "multiplayer-tictactoe.appspot.com",
+            messagingSenderId: "490148073774"
+            };
+            firebase.initializeApp(config);
+            //------------------------------------------------------------------
+        </script>
+        
+        <!-- 
+        FIXME: The formatting is not quite correct here...
+        
+        The message box should be displayed to the right of the TicTacToe
+        board.
+        -->
+        <aside><span id='messageBox'></span></aside>
+        <section>
+            <div id='row0'>
+            <image id ="space00" class='space'></image>
+            <image class='vertline'></image>
+            <image id ="space01" class='space'></image>
+            <image class='vertline'></image>
+            <image id ="space02" class='space'></image>
+            </div>
+            <div>
+                <image class='horzline'></image>
+                <image class='horzline'></image>
+                <image class='horzline'></image>
+            </div>
+            <div id='row1'>
+                <image id ="space10" class='space'></image>
+                <image class='vertline'></image>
+                <image id ="space11" class='space'></image>
+                <image class='vertline'></image>
+                <image id ="space12" class='space'></image>
+            </div>
+            <div>
+                <image class='horzline'></image>
+                <image class='horzline'></image>
+                <image class='horzline'></image>
+            </div>
+            <div id='row2'>
+                <image id="space20" class='space'></image>
+                <image class='vertline'></image>
+                <image id="space21" class='space'></image>
+                <image class='vertline'></image>
+                <image id="space22" class='space'></image>
+            </div>
+        </section>
+        <section>
+            <br>
+            <br>
+            <div id="textArea">
+                You are: <span id='playerType'></span><br>
+                Current turn: <span id='turn'></span><br>
+                Number of clients: <span id='clientNumText'></span><br>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Firebase Database Test</title>
+        <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+    </head>
+    <body>
+        <script> 
+        //INITIALIZE FIREBASE CONNECTION --- MUST BE EXECUTED FIRST!
+            /* 
+            If your Firebase has authorization rules you will need to change it 
+            to either allow all connections or you will need to add client 
+            authentication to the Javascript below.
+            */
+            // Replace with your Firebase info
+            //----------------------------------
+            var config = {
+            apiKey: "AIzaSyBkny_zSEzllYyPfdykzMDIefij_y4dpcs",
+            authDomain: "multiplayer-tictactoe.firebaseapp.com",
+            databaseURL: "https://multiplayer-tictactoe.firebaseio.com",
+            storageBucket: "multiplayer-tictactoe.appspot.com",
+            messagingSenderId: "490148073774"
+            };
+            firebase.initializeApp(config);
+            //----------------------------------
+        </script>
+        
+        <!--- User Interface --->
+        <!
+        <br>
+        Current server value at node <input id='input1' type="text" value="null">:<span id='nodeVal'></span>
+        <br>
+        <button onClick="readFromFB(document.getElementById('input1').value, 'nodeVal')">Receive from server node</button>
+        <br>
+        <br>
+        Node to write/create/delete: <input id='input2' type="text" value="null">
+        <br>
+        Value to send: <input id='input3' type="text" value="null">
+        <br>
+        <button onClick="writeToFB(document.getElementById('input2').value, 
+        document.getElementById('input3').value)">Write to/create node with value</button>
+        <br>
+        <button onClick="deleteFromFB(document.getElementById('input2').value)">
+            Delete this node</button>
+        
+        <script>
+        /* 
+        Nodes are my name for rows and sub-rows in a Firebase database.
+        
+        For example, if my Firebase Database looks like this:
+        car1:
+            make: 'BMW'
+            model: 'M3 GTR'
+            year: 2012
+            oil_change_dates:
+                2014: ['5/9', 12/10']
+                2015: ['6/14']
+                2016: ['1/12', '4/30', '10/2']
+        house_address: '14 Central Avenue, Rockport, OH'
+                
+            
+        Here are some node values:
+        'car1/make' = 'BMW'
+        'car1/oil_change_dates/2014' = ['5/9', '12/10']
+        'house_address' = '14 Central Avenue, Rockport, OH'
+        
+        If you've used databases before, this shows you how NoSQL (what FB
+        uses) is a little different. There are just rows and subrows, but no
+        tables.
+        */
+        
+        /*
+        MAKE THESE FUNCTIONS WORK
+        replace the question marks with the necessary function calls
+        such as .set(...); .once(...); and .remove(...)
+        
+        Looking up javascript arrow functions may be useful.
+        Have your Firebase database open so you can see the changes in
+        real-time and compare to the webpage.
+        */
+        
+        //value is what we want to insert at the database node
+        function writeToFB(node, value) {
+            console.log(firebase.database().ref(node));
+            
+            //firebase.database().ref(node).?;
+        }
+        
+        //destination is the HTML element we want to write to
+        function readFromFB(node, destination) {
+            console.log(firebase.database().ref(node));
+            
+            //firebase.database().ref(node).?;
+        }
+        
+        function deleteFromFB(node) {
+            console.log(firebase.database().ref(node));
+            
+            //firebase.database().ref(node).?;
+        }
+        </script>
+        
+    </body>
+</html>

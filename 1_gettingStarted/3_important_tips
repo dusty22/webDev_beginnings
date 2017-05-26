@@ -1,0 +1,23 @@
+Be careful when working with Cloud9 and your HTML files.
+
+Issue: My changes aren't appearing when I run the webpage!
+
+Solution: 
+Hit F5 in most browsers to do a full page-reload, since your browser will
+cache and keep old files. Make sure you hit save in Cloud9.
+
+
+Issue: I can't figure out what's wrong!
+
+Solution: 
+Right click on your webpage, hit Inspect. Then go to Console.
+Here you will see errors in your files and at which line. Among other
+information.
+
+
+Issue: I'm getting a 404 Page Not Found!
+
+Solution:
+Make sure you are only trying to host one HTML file at a time.
+Make sure you didn't move the files somewhere else on C9, if you did,
+start a new runner that points to the right file.

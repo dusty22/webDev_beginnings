@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html
+<head>
+<meta charset="utf-8">
+<title></title> <!-- The words you see on the page tab -->
+
+<style>
+/*
+CSS can go here (good), or it can go directly into HTML elements below
+(not as good), or it can go in a separate file (best).
+
+CSS stands for "Cascading Style Sheet." 
+
+It sounds complicated, but it's really just a way of controlling visuals without
+affecting the actual web page content. Think simple things, like font, color,
+bold, text-alignment, image size.
+
+It used to be have to be part of the HTML but now it can be separated from it to 
+make things more modular. 
+
+If you think of a Model-View-Controller design, then this is like the 'View'.
+You can easily combine the Model-View-Controller all into one HTML file
+but it's not as good design wise.
+
+You specify how to style HTML elements here by:
+id (#idName)
+class (.className)
+HTML element-type (p, h1, h2, input[type=radio])
+*/
+
+.firstset {
+	
+}
+
+#HelloWorld {
+	color: blue;
+}
+
+#MyParagraph {
+	color: yellow;
+	font-size: 50%;
+}
+
+#MyDiv {
+	font-family: 'Times New Roman';
+	font-style: italic ;
+}
+
+</style>
+</head>
+
+<body>
+<!--
+This is where the HTML (which stands for Hyper Text Markup Language) goes. 
+
+Think of this as the "static" content of your webpage, or the "Model" in an 
+MVC design. This is where all the text and basic structure of the webpage exists.
+
+You markup the text so that browsers will know what they're looking at.
+You might say, this piece of text is a link, or this link should be shown as an
+image, these pieces of text should be in a table, this set of text is a paragraph etc.
+
+These HTML elements you create can then be given names (ids), or grouped into
+classes. This way your Javascript code, CSS, and PHP can find these elements
+and operate on them.
+-->
+
+<br> <!-- a line break element -->
+<h1 id='HelloWorld' class='firstset'></h1> <!-- A header element. Write text inside. -->
+<br>
+<p id= 'MyParagraph' class='firstset'></p> <!-- A paragraph element. Write a message here. -->
+
+<br>
+<div id='MyDiv'> <!-- A div (division) element. A way to break up pages into blocks/divisions. -->
+	<h1></h1>
+	<p></p>
+</div>
+
+</body>
+
+<!--
+To see this Cloud9 html file as a webpage;
+either
+- Right-click on the file: hit Preview
+- Right-click on the file: hit Run, a new runner will appear, and press the run
+							button, and click the link while it is running.
+							
+Remember, you can only host one webpage at a time on Cloud9.
+-->
+</html>
